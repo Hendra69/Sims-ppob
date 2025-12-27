@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Box, Card, Grid } from "@mui/material";
 
-import Login from "./Login";
-import Register from "./Register";
+import Login from "../LoginForm/Register";
+import Register from "../LoginForm/Register";
 
 import gambar_regis from "../../assets/Images/gambar1.png"; 
 
