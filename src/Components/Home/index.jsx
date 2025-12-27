@@ -2,7 +2,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 
 import AppHeader from "./AppHeader";
-import Welcome from "./Welcome";
+import Welcome from "../components/home/Welcome";
 import BalanceCard from "./BalanceCard";
 import ServicesGrid from "./ServicesGrid";
 import BannerCarousel from "./BannerCarousel";
