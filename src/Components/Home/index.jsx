@@ -2,7 +2,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 
 import AppHeader from "./AppHeader";
-import WelcomeCard from "./WelcomeCard";
+import Welcome from "./Welcome";
 import BalanceCard from "./BalanceCard";
 import ServicesGrid from "./ServicesGrid";
 import BannerCarousel from "./BannerCarousel";
@@ -33,7 +33,7 @@ const Home = () => {
         {error && <Alert severity="error" sx={{ mb: 2 }}>{String(error)}</Alert>}
 
         <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 3, alignItems: "start" }}>
-          <WelcomeCard />
+          <Welcome />
           <BalanceCard />
         </Box>
 

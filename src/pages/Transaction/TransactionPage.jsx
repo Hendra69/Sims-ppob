@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import AppHeader from "../../components/layout/AppHeader";
-import WelcomeCard from "../../components/home/WelcomeCard";
+import WelcomeCard from "../../components/home/Welcome";
 import BalanceCard from "../../components/home/BalanceCard";
 
 import { fetchProfile, fetchBalance } from "../../Features/homeSlice";

@@ -3,7 +3,7 @@ import { Box, Container, Snackbar, Alert } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 
 import AppHeader from "../../components/layout/AppHeader";
-import WelcomeCard from "../../components/home/WelcomeCard";
+import WelcomeCard from "../../components/home/Welcome";
 import BalanceCard from "../../components/home/BalanceCard";
 import ServiceGrid from "../../components/home/ServicesGrid";
 import PaymentForm from "../../components/home/PaymentForm";

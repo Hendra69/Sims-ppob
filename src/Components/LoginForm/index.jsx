@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Box, Card, Grid } from "@mui/material";
 
-import LoginForm from "./LoginForm";
-import RegisterForm from "./RegisterForm";
+import Login from "./Login";
+import Register from "./Register";
 
 import gambar_regis from "../../assets/Images/gambar1.png"; 
 
@@ -40,9 +40,9 @@ export default function AuthPage() {
             }}
           >
             {mode === "login" ? (
-              <LoginForm onGoRegister={() => setMode("register")} />
+              <Login onGoRegister={() => setMode("register")} />
             ) : (
-              <RegisterForm onGoLogin={() => setMode("login")} />
+              <Register onGoLogin={() => setMode("login")} />
             )}
           </Grid>
 
