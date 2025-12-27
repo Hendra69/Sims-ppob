@@ -29,7 +29,6 @@ export default function AuthPage() {
         }}
       >
         <Grid container>
-          {/* LEFT: FORM */}
           <Grid
             item
             xs={12}

@@ -1,36 +1,48 @@
-import './App.css';
+import "./App.css";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-// Component
-import LoginForm from './Components/LoginForm';
-import Home from './Components/Home';
+import LoginForm from "./components/LoginForm";
+import HomePage from "./pages/Home/HomePage";
+import TopUpPage from "./pages/TopUp/TopUpPage";
+import TransactionPage from "./pages/Transaction/TransactionPage";
+import AccountPage from "./pages/Account/AccountPage";
 
-import {
-  Box,
-  AppBar,
-} from '@mui/material';
 
-import { useSelector } from 'react-redux';
-import { selectUser } from './Features/userSlice';
+
+
+import { selectToken } from "./Features/userSlice";
 
 function App() {
-
-  const user = useSelector(selectUser);
+  const token = useSelector(selectToken);
 
   return (
-    <>
-      <Box>
-        <AppBar sx={{ backgroundColor: "#dee2e6" }} position="static">
-        </AppBar>
-      </Box>
+    <Routes>
+      <Route
+        path="/login"
+        element={token ? <Navigate to="/" replace /> : <LoginForm />}
+      />
 
-      {
-        user ? (
-          <Home />
-        ) : (
-          <LoginForm />
-        )
-      }
-    </>
+      <Route
+        path="/"
+        element={token ? <HomePage /> : <Navigate to="/login" replace />}
+      />
+
+      <Route
+        path="/topup"
+        element={token ? <TopUpPage /> : <Navigate to="/login" replace />}
+      />
+      <Route
+        path="/transaction"
+        element={token ? <TransactionPage /> : <Navigate to="/login" replace />}
+      />
+      <Route
+        path="/account"
+        element={token ? <AccountPage /> : <Navigate to="/login" replace />}
+      />
+
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 

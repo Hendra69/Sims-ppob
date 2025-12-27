@@ -75,7 +75,6 @@ export default function LoginForm({ onGoRegister }) {
 
   return (
     <Box sx={{ width: "100%", maxWidth: 420, mx: "auto" }}>
-      {/* Header */}
       <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 3 }}>
         <Box
           sx={{
@@ -102,7 +101,6 @@ export default function LoginForm({ onGoRegister }) {
       </Typography>
 
       <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
-        {/* EMAIL: icon @ di kiri */}
         <TextField
           fullWidth
           placeholder="masukan email anda"

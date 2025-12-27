@@ -89,7 +89,6 @@ export default function RegisterForm({ onGoLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // reset error slice (biar tidak nyangkut)
     dispatch(clearError());
 
     setTouched({
@@ -112,12 +111,10 @@ export default function RegisterForm({ onGoLogin }) {
         })
       ).unwrap();
 
-      // ✅ ambil message dari API (paling umum: res.message)
       const msg = res?.message || "Registrasi berhasil!";
       setSuccessMsg(msg);
       setOpenSuccess(true);
 
-      // optional: reset form
       setForm({
         email: "",
         firstName: "",
@@ -127,7 +124,6 @@ export default function RegisterForm({ onGoLogin }) {
       });
       setTouched({});
     } catch (err) {
-      // err di sini biasanya string dari rejectWithValue
       const msg = (typeof err === "string" ? err : null) || apiError || "Registrasi gagal";
       setErrorMsg(msg);
       setOpenError(true);
@@ -152,7 +148,7 @@ export default function RegisterForm({ onGoLogin }) {
         >
           S
         </Box>
-        <Typography sx={{ fontWeight: 700, letterSpacing: 0.2 }}>
+        <Typography sx={{ fontWeight: 800 }}>
           SIMS PPOB
         </Typography>
       </Box>
