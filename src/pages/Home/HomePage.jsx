@@ -3,7 +3,7 @@ import { Box, Container, Snackbar, Alert } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 
 import AppHeader from "../../components/layout/AppHeader";
-import WelcomeCard from "../../components/home/Welcome";
+import Welcome from "../../components/home/Welcome";
 import BalanceCard from "../../components/home/BalanceCard";
 import ServiceGrid from "../../components/home/ServicesGrid";
 import PaymentForm from "../../components/home/PaymentForm";
@@ -64,7 +64,7 @@ export default function HomePage() {
             {activeMenu === "home" && (
                 <Container maxWidth="lg" sx={{ py: 3 }}>
                     <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" }, gap: 3 }}>
-                        <WelcomeCard />
+                        <Welcome />
                         <BalanceCard />
                     </Box>
 
